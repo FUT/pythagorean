@@ -1,15 +1,15 @@
 SUM = 1000
 
 result = []
-1.upto(1000) do |a|
-  1.upto(1000 - a) do |b|
+1.upto(SUM) do |a|
+  1.upto(SUM - a) do |b|
     c = Math.sqrt(a**2 + b**2)
     result = [a, b, c]
 
-    break if result.sum === 1000
+    break if result.sum === SUM
   end
 
-  break if result.sum === 1000
+  break if result.sum === SUM
 end
 
 puts result.map(&:to_i)
